@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <title>Encomenda Confirmada | Loja</title>
+</head>
+<body>
+
+  <header class="l-header" id="header">
+    <nav class="nav bd-grid">
+      <a href="./index.html" class="nav__logo">Loja</a>
+      <div class="nav__shop" id="cart-toggle">
+        <i class='bx bx-shopping-bag'></i>
+        <span id="cart-badge">0</span>
+      </div>
+    </nav>
+  </header>
+
+  <main class="l-main">
+    <section class="thankyou section">
+      <div class="bd-grid">
+        <div class="thankyou__card">
+          <div class="thankyou__icon">
+            <i class='bx bx-check-circle'></i>
+          </div>
+          <h1 class="thankyou__title">Obrigado pela tua encomenda!</h1>
+          <p class="thankyou__subtitle">
+            Recebemos o teu pedido e vamos processá-lo em breve.
+          </p>
+
+          <div class="thankyou__info">
+            <div>
+              <span>Nº de Encomenda</span>
+              <strong id="order-id">#FM-0000</strong>
+            </div>
+            <div>
+              <span>Total</span>
+              <strong id="order-total">$0.00</strong>
+            </div>
+            <div>
+              <span>Email de Confirmação</span>
+              <strong id="order-email">—</strong>
+            </div>
+          </div>
+
+          <p class="thankyou__msg">
+            Enviámos os detalhes para o teu email. Se não receberes em 5 minutos,
+            verifica a pasta de spam.
+          </p>
+
+          <div class="thankyou__actions">
+            <a href="./shop.html" class="button">Continuar a Comprar</a>
+            <a href="./index.html" class="button-light">
+              Voltar à Home <i class='bx bx-right-arrow-alt button-icon'></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer section">
+    <p class="footer__copy">&#169; 2026 Favela Madness. All rights reserved</p>
+  </footer>
+
+  <script type="module" src="../js/main.js"></script>
+  <script type="module" src="../js/cart-ui.js"></script>
+  <script type="module" src="../js/thank-you.js"></script>
+</body>
+</html>

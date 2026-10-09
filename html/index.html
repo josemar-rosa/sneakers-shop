@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Loja de sneakers — Nova coleção 2020. Nike, Adidas e mais.">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <!-- Box Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+  <title>Loja Online | Sneakers</title>
+</head>
+<body>
+
+  <!--===== HEADER =====-->
+  <header class="l-header" id="header">
+    <nav class="nav bd-grid">
+      <div class="nav__toggle" id="nav-toggle">
+        <i class='bx bxs-grid'></i>
+      </div>
+
+      <a href="#" class="nav__logo">Sneakers Shop</a>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+          <li class="nav__item"><a href="#featured" class="nav__link">Destaques</a></li>
+          <li class="nav__item"><a href="#women" class="nav__link">Mulheres</a></li>
+          <li class="nav__item"><a href="#new" class="nav__link">Novidades</a></li>
+          <li class="nav__item"><a href="./shop.html" class="nav__link">Shop</a></li>
+        </ul>
+      </div>
+
+      <div class="nav__shop" id="cart-toggle">
+        <i class='bx bx-shopping-bag'></i>
+        <span id="cart-badge">0</span>
+      </div>
+    </nav>
+  </header>
+
+  <main class="l-main">
+
+    <!--===== HOME =====-->
+    <section class="home" id="home">
+      <div class="home__container bd-grid">
+        <div class="home__sneaker">
+          <div class="home__shape"></div>
+          <img src="../img/imghome.png" alt="Yeezy Boost 350" class="home__img">
+        </div>
+
+        <div class="home__data">
+          <span class="home__new">Novo</span>
+          <h1 class="home__title">YEEZY BOOST <br> SPLY - 350</h1>
+          <p class="home__description">Veja a nova coleção de sneakers</p>
+          <a href="#new" class="button">Em Alta</a>
+        </div>
+      </div>
+    </section>
+
+    <!--===== FEATURED =====-->
+    <section class="featured section" id="featured">
+      <h2 class="section-title">Destaques</h2>
+
+      <div class="featured__container bd-grid">
+        <article class="sneaker">
+          <div class="sneaker__sale">Sale</div>
+          <img src="../img/featured1.png" alt="Nike Jordan" class="sneaker__img" loading="lazy">
+          <span class="sneaker__name">Nike Jordan</span>
+          <span class="sneaker__preci">$149.99</span>
+          <button class="button-light add-to-cart" data-id="1">
+            Adicionar ao Carrinho <i class='bx bx-right-arrow-alt button-icon'></i>
+          </button>
+        </article>
+
+        <article class="sneaker">
+          <div class="sneaker__sale">Sale</div>
+          <img src="../img/featured2.png" alt="Nike Free RN" class="sneaker__img" loading="lazy">
+          <span class="sneaker__name">Nike Free RN</span>
+          <span class="sneaker__preci">$149.99</span>
+          <button class="button-light add-to-cart" data-id="2">
+            Adicionar ao Carrinho <i class='bx bx-right-arrow-alt button-icon'></i>
+          </button>
+        </article>
+
+        <article class="sneaker">
+          <div class="sneaker__sale">Sale</div>
+          <img src="../img/featured3.png" alt="Nike Free RN" class="sneaker__img" loading="lazy">
+          <span class="sneaker__name">Nike Free RN</span>
+          <span class="sneaker__preci">$149.99</span>
+          <button class="button-light add-to-cart" data-id="3">
+            Adicionar ao Carrinho <i class='bx bx-right-arrow-alt button-icon'></i>
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <!--===== COLLECTION =====-->
+    <section class="collection section">
+      <div class="collection__container bd-grid">
+
+        <div class="collection__card">
+          <div class="collection__data">
+            <h3 class="collection__name">Nike</h3>
+            <p class="collection__description">Nova Coleção 2020</p>
+            <a href="./shop.html" class="button-light">
+              Compre Agora <i class='bx bx-right-arrow-alt button-icon'></i>
+            </a>
+          </div>
+          <img src="../img/collection2.png" alt="Nike Collection" class="collection__img" loading="lazy">
+        </div>
+
+        <div class="collection__card">
+          <div class="collection__data">
+            <h3 class="collection__name">Nike</h3>
+            <p class="collection__description">Nova Coleção 2020</p>
+            <a href="./shop.html" class="button-light">
+              Compre Agora <i class='bx bx-right-arrow-alt button-icon'></i>
+            </a>
+          </div>
+          <img src="../img/collection1.png" alt="Nike Collection" class="collection__img" loading="lazy">
+        </div>
+
+        <div class="collection__card">
+          <div class="collection__data">
+            <h3 class="collection__name">Adidas</h3>
+            <p class="collection__description">Nova Coleção 2020</p>
+            <a href="./shop.html" class="button-light">
+              Compre Agora <i class='bx bx-right-arrow-alt button-icon'></i>
+            </a>
+          </div>
+          <img src="../img/collection2.png" alt="Adidas Collection" class="collection__img" loading="lazy">
+        </div>
+
+      </div>
+    </section>
+
+    <!--===== WOMEN SNEAKERS =====-->
+    <section class="women section" id="women">
+      <h2 class="section-title">Para Mulheres</h2>
+
+      <div class="women__container bd-grid">
+        <article class="sneaker">
+          <img src="../img/women1.png" alt="Nike Free TR" class="sneaker__img" loading="lazy">
+          <span class="sneaker__name">Nike Free TR</span>
+          <span class="sneaker__preci">$129.99</span>
+          <button class="button-light add-to-cart" data-id="8">
+            Adicionar ao Carrinho <i class='bx bx-right-arrow-alt button-icon'></i>
+          </button>
+        </article>
+
+        <article class="sneaker">
+          <img src="../img/women2.png" alt="Nike Free TR" class="sneaker__img" loading="lazy">
+          <span class="sneaker__name">Nike Free TR</span>
+          <span class="sneaker__preci">$129.99</span>
+          <button class="button-light add-to-cart" data-id="9">
+            Adicionar ao Carrinho <i class='bx bx-right-arrow-alt button-icon'></i>
+          </button>
+        </article>
+
+        <article class="sneaker">
+          <img src="../img/women3.png" alt="Nike GS Pink" class="sneaker__img" loading="lazy">
+          <span class="sneaker__name">Nike GS Pink</span>
+          <span class="sneaker__preci">$129.99</span>
+          <button class="button-light add-to-cart" data-id="10">
+            Adicionar ao Carrinho <i class='bx bx-right-arrow-alt button-icon'></i>
+          </button>
+        </article>
+
+        <article class="sneaker">
+          <img src="../img/women4.png" alt="Nike Get 5" class="sneaker__img" loading="lazy">
+          <span class="sneaker__name">Nike Get 5</span>
+          <span class="sneaker__preci">$129.99</span>
+          <button class="button-light add-to-cart" data-id="11">
+            Adicionar ao Carrinho <i class='bx bx-right-arrow-alt button-icon'></i>
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <!--===== OFFER =====-->
+    <section class="offer section">
+      <div class="offer__container bd-grid">
+        <div class="offer__data">
+          <h3 class="offer__title">50% de Desconto</h3>
+          <p class="offer__description">Nas Adidas Superstar sneakers</p>
+          <a href="./shop.html" class="button">Compre Agora</a>
+        </div>
+        <img src="../img/offert.png" alt="Oferta especial" class="offer__img" loading="lazy">
+      </div>
+    </section>
+
+    <!--===== NEW COLLECTION =====-->
+    <!--===== NEW COLLECTION =====-->
+<section class="new section" id="new">
+  <h2 class="section-title">Nova Coleção</h2>
+
+  <div class="new__container bd-grid">
+    <!-- Bloco esquerdo: destaque masculino -->
+    <div class="new__mens">
+      <img src="../img/new1.png" alt="Coleção masculina" class="new__mens-img" loading="lazy">
+      <h3 class="new__title">Para Homens</h3>
+      <span class="new__preci">From $79.99</span>
+      <a href="./shop.html" class="button-light">
+        Veja a Coleção <i class='bx bx-right-arrow-alt button-icon'></i>
+      </a>
+    </div>
+
+    <!-- Bloco direito: 4 cards -->
+    <div class="new__sneaker">
+      <div class="new__sneaker-card">
+        <img src="../img/new2.png" alt="Nike Sply" class="sneaker__img" loading="lazy">
+        <div class="new__sneaker-overlay">
+          <button class="button add-to-cart" data-id="4">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+
+      <div class="new__sneaker-card">
+        <img src="../img/new3.png" alt="Nike Sply" class="sneaker__img" loading="lazy">
+        <div class="new__sneaker-overlay">
+          <button class="button add-to-cart" data-id="5">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+
+      <div class="new__sneaker-card">
+        <img src="../img/new4.png" alt="Nike Sply" class="sneaker__img" loading="lazy">
+        <div class="new__sneaker-overlay">
+          <button class="button add-to-cart" data-id="6">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+
+      <div class="new__sneaker-card">
+        <img src="../img/new5.png" alt="Nike Sply" class="sneaker__img" loading="lazy">
+        <div class="new__sneaker-overlay">
+          <button class="button add-to-cart" data-id="7">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <!--===== NEWSLETTER =====-->
+    <section class="newsletter section">
+      <div class="newsletter__container bd-grid">
+        <div>
+          <h3 class="newsletter__title">Subscreva e ganhe <br> 10% de Desconto</h3>
+          <p class="newsletter__description">Ganhe 10% de Desconto em todos Produtos</p>
+        </div>
+
+        <form class="newsletter__subscribe" onsubmit="event.preventDefault();">
+          <input type="email" placeholder="@email.com" class="newsletter__input" required>
+          <button type="submit" class="button">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!--===== FOOTER =====-->
+  <footer class="footer section">
+    <div class="footer__container bd-grid">
+      <div class="footer__box">
+        <h3 class="footer__title">Sneakers Shop</h3>
+        <p class="footer__description">Nova Coleção 2020.</p>
+      </div>
+
+      <div class="footer__box">
+        <h3 class="footer__title">Explore</h3>
+        <ul>
+          <li><a href="#home" class="footer__link">Home</a></li>
+          <li><a href="#featured" class="footer__link">Destaques</a></li>
+          <li><a href="#women" class="footer__link">Mulheres</a></li>
+          <li><a href="#new" class="footer__link">Novidades</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__box">
+        <h3 class="footer__title">Suporte</h3>
+        <ul>
+          <li><a href="#" class="footer__link">Cuidados com Produto</a></li>
+          <li><a href="#" class="footer__link">Atendimento ao Cliente</a></li>
+          <li><a href="#" class="footer__link">Serviço Autorizado</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__box">
+        <a href="#" class="footer__social" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+        <a href="#" class="footer__social" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+        <a href="#" class="footer__social" aria-label="Twitter"><i class='bx bxl-twitter'></i></a>
+        <a href="#" class="footer__social" aria-label="Google"><i class='bx bxl-google'></i></a>
+      </div>
+    </div>
+
+    <p class="footer__copy">&#169; 2021 Favela Madness. All rights reserved</p>
+  </footer>
+
+  <!--===== CART SIDEBAR =====-->
+  <aside id="cart-sidebar" aria-label="Carrinho de compras">
+    <div class="cart-header">
+      <h3>Meu Carrinho</h3>
+      <button id="cart-close" aria-label="Fechar"><i class='bx bx-x'></i></button>
+    </div>
+    <div id="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Total:</span>
+        <span id="cart-total">$0.00</span>
+      </div>
+      <button class="button" id="cart-checkout">Finalizar Compra</button>
+    </div>
+  </aside>
+  <div id="cart-overlay"></div>
+
+  <!--===== SCRIPTS =====-->
+<script type="module" src="../js/main.js"></script>
+<script type="module" src="../js/cart-ui.js"></script>
+<script type="module" src="../js/index.js"></script>
+</body>
+</html>

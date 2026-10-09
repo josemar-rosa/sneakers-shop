@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <title>Loja | Shop</title>
+</head>
+<body>
+
+  <header class="l-header" id="header">
+    <nav class="nav bd-grid">
+      <div class="nav__toggle" id="nav-toggle">
+        <i class='bx bxs-grid'></i>
+      </div>
+      <a href="./index.html" class="nav__logo">Loja</a>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="./index.html" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="./index.html#featured" class="nav__link">Destaques</a></li>
+          <li class="nav__item"><a href="./index.html#women" class="nav__link">Mulheres</a></li>
+          <li class="nav__item"><a href="./index.html#new" class="nav__link">Novidades</a></li>
+          <li class="nav__item"><a href="./shop.html" class="nav__link active">Shop</a></li>
+        </ul>
+      </div>
+     
+    </nav>
+  </header>
+
+  <main class="l-main">
+    <section class="featured section" id="shop">
+      <h2 class="section-title">Todos Produtos</h2>
+
+      <!-- Toolbar -->
+      <div class="shop-toolbar bd-grid">
+        <div class="shop-search">
+          <i class='bx bx-search'></i>
+          <input type="text" id="search-input" placeholder="Procurar produto...">
+        </div>
+        <div></div>
+        <select id="sort-select" class="shop-select">
+          <option value="default">Ordenar: Padrão</option>
+          <option value="price-asc">Preço ↑</option>
+          <option value="price-desc">Preço ↓</option>
+          <option value="name">Nome A-Z</option>
+          <option value="rating">Melhor avaliação</option>
+        </select>
+        <div class="price-filter">
+          <label>Até <span id="price-label">$500</span></label>
+          <input type="range" id="price-range" min="50" max="500" value="500" step="10">
+        </div>
+      </div>
+
+      <!-- Categorias -->
+      <div class="shop-categories bd-grid">
+        <button class="filter-cat is-active" data-cat="all">Todos</button>
+        <button class="filter-cat" data-cat="featured">Destaques</button>
+        <button class="filter-cat" data-cat="new">Novidades</button>
+        <button class="filter-cat" data-cat="women">Mulheres</button>
+      </div>
+
+      <span id="products-count"></span>
+
+      <div class="featured__container bd-grid" id="products-grid"></div>
+      <div class="sneaker__pages" id="pagination"></div>
+    </section>
+  </main>
+
+  <!-- CART SIDEBAR -->
+  <aside id="cart-sidebar" aria-label="Carrinho de compras">
+    <div class="cart-header">
+      <h3>Meu Carrinho</h3>
+      <button id="cart-close" aria-label="Fechar"><i class='bx bx-x'></i></button>
+    </div>
+    <div id="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Total:</span>
+        <span id="cart-total">$0.00</span>
+      </div>
+      <button class="button" id="cart-checkout">Finalizar Compra</button>
+    </div>
+  </aside>
+
+  <!-- CART SIDEBAR -->
+<aside id="cart-sidebar" aria-label="Carrinho">
+  <div class="cart-header">
+    <h3>Meu Carrinho</h3>
+    <button id="cart-close" aria-label="Fechar"><i class='bx bx-x'></i></button>
+  </div>
+  <div id="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-total-row">
+      <span>Total:</span>
+      <span id="cart-total">$0.00</span>
+    </div>
+    <button class="button" id="cart-checkout">Finalizar Compra</button>
+  </div>
+</aside>
+<div id="cart-overlay"></div>
+
+  <footer class="footer section">
+    <div class="footer__container bd-grid">
+      <div class="footer__box">
+        <h3 class="footer__title">Loja</h3>
+        <p class="footer__description">Nova Coleção 2020.</p>
+      </div>
+      <div class="footer__box">
+        <h3 class="footer__title">Explore</h3>
+        <ul>
+          <li><a href="./index.html" class="footer__link">Home</a></li>
+          <li><a href="./index.html#featured" class="footer__link">Destaques</a></li>
+          <li><a href="./index.html#women" class="footer__link">Mulheres</a></li>
+          <li><a href="./index.html#new" class="footer__link">Novidades</a></li>
+        </ul>
+      </div>
+      <div class="footer__box">
+        <h3 class="footer__title">Suporte</h3>
+        <ul>
+          <li><a href="#" class="footer__link">Cuidado de Produtos</a></li>
+          <li><a href="#" class="footer__link">Atendimento ao Cliente</a></li>
+          <li><a href="#" class="footer__link">Serviço Autorizado</a></li>
+        </ul>
+      </div>
+      <div class="footer__box">
+        <a href="#" class="footer__social"><i class='bx bxl-facebook'></i></a>
+        <a href="#" class="footer__social"><i class='bx bxl-instagram'></i></a>
+        <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
+        <a href="#" class="footer__social"><i class='bx bxl-google'></i></a>
+      </div>
+    </div>
+    <p class="footer__copy">&#169; 2021 Favela Madness. All rights reserved</p>
+  </footer>
+
+  <script type="module" src="/js/main.js"></script>
+<script type="module" src="/js/cart-ui.js"></script>
+<script type="module" src="/js/shop.js"></script>
+</body>
+</html>

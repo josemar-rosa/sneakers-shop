@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <title>Produto | Loja</title>
+</head>
+<body>
+
+  <header class="l-header" id="header">
+    <nav class="nav bd-grid">
+      <div class="nav__toggle" id="nav-toggle">
+        <i class='bx bxs-grid'></i>
+      </div>
+      <a href="./index.html" class="nav__logo">Loja</a>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="./index.html" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="./index.html#featured" class="nav__link">Destaques</a></li>
+          <li class="nav__item"><a href="./index.html#women" class="nav__link">Mulheres</a></li>
+          <li class="nav__item"><a href="./index.html#new" class="nav__link">Novidades</a></li>
+          <li class="nav__item"><a href="./shop.html" class="nav__link">Shop</a></li>
+        </ul>
+      </div>
+      <div class="nav__shop" id="cart-toggle">
+        <i class='bx bx-shopping-bag'></i>
+        <span id="cart-badge">0</span>
+      </div>
+    </nav>
+  </header>
+
+  <main class="l-main">
+    <section class="product-section section">
+      <div class="bd-grid" id="product-root"></div>
+    </section>
+  </main>
+
+  <aside id="cart-sidebar" aria-label="Carrinho">
+    <div class="cart-header">
+      <h3>Meu Carrinho</h3>
+      <button id="cart-close" aria-label="Fechar"><i class='bx bx-x'></i></button>
+    </div>
+    <div id="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Total:</span>
+        <span id="cart-total">$0.00</span>
+      </div>
+      <button class="button" id="cart-checkout">Finalizar Compra</button>
+    </div>
+  </aside>
+  <div id="cart-overlay"></div>
+
+  <footer class="footer section">
+    <p class="footer__copy">&#169; 2021 Favela Madness. All rights reserved</p>
+  </footer>
+
+  <script type="module" src="../js/main.js"></script>
+  <script type="module" src="../js/cart-ui.js"></script>
+  <script type="module" src="../js/product.js"></script>
+</body>
+</html>

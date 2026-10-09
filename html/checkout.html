@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <title>Checkout | Loja</title>
+</head>
+<body>
+
+  <header class="l-header" id="header">
+    <nav class="nav bd-grid">
+      <div class="nav__toggle" id="nav-toggle">
+        <i class='bx bxs-grid'></i>
+      </div>
+      <a href="./index.html" class="nav__logo">Loja</a>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="./index.html" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="./shop.html" class="nav__link">Shop</a></li>
+        </ul>
+      </div>
+      <div class="nav__shop" id="cart-toggle">
+        <i class='bx bx-shopping-bag'></i>
+        <span id="cart-badge">0</span>
+      </div>
+    </nav>
+  </header>
+
+  <main class="l-main">
+    <section class="checkout section">
+      <div class="bd-grid">
+        <h2 class="section-title">Finalizar Compra</h2>
+
+        <div class="checkout__steps">
+          <span class="step is-active">1. Dados</span>
+          <span class="step">2. Envio</span>
+          <span class="step">3. Pagamento</span>
+        </div>
+
+        <div class="checkout__layout">
+          <!-- Formulário -->
+          <form class="checkout__form" id="checkout-form" novalidate>
+            <fieldset>
+              <legend>Dados Pessoais</legend>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">Nome *</label>
+                  <input type="text" id="firstName" name="firstName" required>
+                  <small class="error-msg"></small>
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Sobrenome *</label>
+                  <input type="text" id="lastName" name="lastName" required>
+                  <small class="error-msg"></small>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" name="email" required>
+                  <small class="error-msg"></small>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Telefone *</label>
+                  <input type="tel" id="phone" name="phone" required>
+                  <small class="error-msg"></small>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Morada de Envio</legend>
+              <div class="form-group">
+                <label for="address">Endereço *</label>
+                <input type="text" id="address" name="address" placeholder="Rua, número, andar" required>
+                <small class="error-msg"></small>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="city">Cidade *</label>
+                  <input type="text" id="city" name="city" required>
+                  <small class="error-msg"></small>
+                </div>
+                <div class="form-group">
+                  <label for="postalCode">Código Postal *</label>
+                  <input type="text" id="postalCode" name="postalCode" required>
+                  <small class="error-msg"></small>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="country">País *</label>
+                <select id="country" name="country" required>
+                  <option value="">Escolhe um país</option>
+                  <option value="PT">Portugal</option>
+                  <option value="BR">Brasil</option>
+                  <option value="AO">Angola</option>
+                  <option value="MZ">Moçambique</option>
+                </select>
+                <small class="error-msg"></small>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Método de Pagamento</legend>
+              <div class="payment-options">
+                <label class="payment-option">
+                  <input type="radio" name="payment" value="card" checked>
+                  <i class='bx bx-credit-card'></i>
+                  <span>Cartão</span>
+                </label>
+                <label class="payment-option">
+                  <input type="radio" name="payment" value="mbway">
+                  <i class='bx bx-mobile'></i>
+                  <span>MB Way</span>
+                </label>
+                <label class="payment-option">
+                  <input type="radio" name="payment" value="transfer">
+                  <i class='bx bx-transfer'></i>
+                  <span>Transferência</span>
+                </label>
+              </div>
+            </fieldset>
+          </form>
+
+          <!-- Resumo -->
+          <aside class="checkout__summary">
+            <h3>Resumo da Encomenda</h3>
+            <div id="checkout-items"></div>
+
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <span id="summary-subtotal">$0.00</span>
+            </div>
+            <div class="summary-row">
+              <span>Envio</span>
+              <span id="summary-shipping">$0.00</span>
+            </div>
+            <div class="summary-row summary-row--total">
+              <span>Total</span>
+              <span id="summary-total">$0.00</span>
+            </div>
+
+            <button class="button button--primary" id="place-order" form="checkout-form">
+              Confirmar Encomenda
+            </button>
+
+            <a href="./shop.html" class="checkout__continue">
+              <i class='bx bx-left-arrow-alt'></i> Continuar a comprar
+            </a>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CART SIDEBAR -->
+  <aside id="cart-sidebar" aria-label="Carrinho">
+    <div class="cart-header">
+      <h3>Meu Carrinho</h3>
+      <button id="cart-close" aria-label="Fechar"><i class='bx bx-x'></i></button>
+    </div>
+    <div id="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Total:</span>
+        <span id="cart-total">$0.00</span>
+      </div>
+      <button class="button" id="cart-checkout">Finalizar Compra</button>
+    </div>
+  </aside>
+  <div id="cart-overlay"></div>
+
+  <footer class="footer section">
+    <p class="footer__copy">&#169; 2026 Favela Madness. All rights reserved</p>
+  </footer>
+
+  <script type="module" src="../js/main.js"></script>
+  <script type="module" src="../js/cart-ui.js"></script>
+  <script type="module" src="../js/checkout.js"></script>
+</body>
+</html>
